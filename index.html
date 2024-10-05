@@ -64,8 +64,11 @@
 
   </header>
   <style>
-    #drinks {
+    #burgers {
       display: flex;
+    }
+    #drinks{
+      display:flex;
     }
 
     .title {
@@ -91,7 +94,7 @@
       /* Soft shadow */
       margin-top: 30px;
       background-color: rgb(245, 241, 241);
-     
+
     }
 
     .items {
@@ -173,19 +176,40 @@
     }
 
     @media (max-width: 1000px) {
+      #burgers {
+        flex-direction: column;
+        /* Change to column layout on small screens */
+        align-items: center;
+
+        /* Center items */
+      }
+    }
+
+    
+    @media (max-width: 1000px) {
       #drinks {
         flex-direction: column;
         /* Change to column layout on small screens */
         align-items: center;
-        
+
         /* Center items */
       }
+    }
+
+
+    .separator {
+      height: 20px;
+      /* Space between sections */
+      background-color: #f0f0f0;
+      /* Light background color for contrast */
+      margin: 20px 0;
+      /* Vertical margin to create space */
     }
   </style>
 
 
 
-  <div id="drinks">
+  <div id="burgers">
 
     <div class="title">
       <h1>Burgers</h1>
@@ -321,17 +345,123 @@
 
     </div>
 
+  </div>
+
+  
+  <div class="separator"></div>
 
 
 
 
 
 
-    <div id="sandwiches">
 
+  <div id="drinks">
 
+    <div class="title">
+      <h1>Drinks</h1>
     </div>
 
+
+    <div class="items">
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, repellat.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+   
 
 
   </div>
