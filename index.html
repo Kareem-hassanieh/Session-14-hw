@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      position: relative;
+    }
+
+
+    img {
+      width: 100px;
+    }
+  </style>
+  <header>
+    <style>
+      .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+
+        padding: 20px 40px;
+        background-color: #ffaf04;
+        color: #5d4037
+      }
+
+      .top button {
+        padding: 10px;
+        width: 70px;
+        background-color: #fffff0;
+        font-size: 20px;
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+
+    <div class="top">
+      <h3> Menu</h3>
+
+      <h1>Bite & Bun</h1>
+
+
+      <button onclick="showForm()">+</button>
+
+
+
+    </div>
+
+
+
+  </header>
+  <style>
+    #drinks {
+      display: flex;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      /* Space below the title */
+      font-family: 'Arial', sans-serif;
+      /* Font family */
+      font-size: 1rem;
+      /* Larger font for title */
+      color: #5d4037;
+      /* Title color */
+
+      /* Light background color for contrast */
+      padding: 10px 20px;
+      /* Padding for title */
+      margin-left: 20px;
+      border-radius: 8px;
+      /* Rounded corners */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      /* Soft shadow */
+      margin-top: 30px;
+      background-color: rgb(245, 241, 241);
+     
+    }
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 4 equal columns */
+      /* 4 equal columns */
+      gap: 20px;
+      /* Space between grid items */
+      padding: 20px;
+      margin-left: 30px;
+
+    }
+
+
+    @media (max-width: 1024px) {
+      .items {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on medium screens */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .items {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on smaller screens */
+      }
+    }
+
+    @media (max-width: 580px) {
+      .items {
+        grid-template-columns: 1fr;
+        /* 1 column on very small screens */
+      }
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .item {
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #5d4037;
+      border-radius: 10px;
+      margin: 10px;
+      background-color: #FFA500;
+      ;
+    }
+
+    .item:hover {
+      transform: scale(1.05);
+      /* Scale up on hover */
+    }
+
+
+    /* Background colors for different items */
+
+
+    .data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .picItem {
+      width: 100%
+    }
+
+    .picItem img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 1000px) {
+      #drinks {
+        flex-direction: column;
+        /* Change to column layout on small screens */
+        align-items: center;
+        
+        /* Center items */
+      }
+    }
+  </style>
+
+
+
+  <div id="drinks">
+
+    <div class="title">
+      <h1>Burgers</h1>
+    </div>
+
+
+    <div class="items">
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, repellat.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+      </div>
+
+
+
+      <div class="item">
+        <div class="picItem">
+
+          <img src="/pexels-valeriya-1639557.jpg">
+
+        </div>
+
+        <div class="data">
+
+          <h2>classic burger</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+          <p>$200</p>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div id="sandwiches">
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+  <div class="form" id="formID">
+    <style>
+      .form {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: auto;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        max-width: 30%;
+        border: 2px solid black;
+
+      }
+
+      #formID {
+        display: none;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .chosing {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+
+    <div class="top">
+      <h2>Add Item</h2>
+      <button onclick="removeForm()">X</button>
+    </div>
+
+    <div class="chosing">
+      <div id="c">
+        <label for="category">Choose a category:</label><br>
+        <select id="category" name="category">
+          <option value="empty"></option>
+          <option value="sandwiches">Sandwiches</option>
+          <option value="drinks">Drinks</option>
+        </select>
+
+      </div>
+
+      <div class="image">
+
+        <label class="file-input-label" for="file-input">Add Image</label><br>
+        <input type="file" id="file-input" class="file-input" accept="image/*">
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    <label for="item-name">Item name:</label>
+    <input type="text" id="item-name">
+
+    <label for="item-name">Item price:</label>
+    <input type="text" id="item-price">
+
+    <label for="item-details">Item details:</label>
+    <input type="text" id="item-details">
+
+    <button onclick="addItem()">Add Item</button>
+
+
+
+    <label>
+
+    </label>
+
+
+
+
+
+  </div>
+
+  </div>
+  <script src="index2.js"></script>
+
+</body>
+
+</html>
