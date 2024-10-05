@@ -26,7 +26,7 @@
   </style>
   <header>
     <style>
-      .top {
+      .top-menu {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -38,7 +38,7 @@
         color: #5d4037
       }
 
-      .top button {
+      .top-menu button {
         padding: 10px;
         width: 70px;
         background-color: #fffff0;
@@ -48,7 +48,7 @@
       }
     </style>
 
-    <div class="top">
+    <div class="top-menu">
       <h3> Menu</h3>
 
       <h1>Bite & Bun</h1>
@@ -64,11 +64,11 @@
 
   </header>
   <style>
-    #burgers {
+    .burgersConatiner {
       display: flex;
     }
 
-    #drinks {
+    .drinksContainer {
       display: flex;
     }
 
@@ -181,7 +181,7 @@
     }
 
     @media (max-width: 1000px) {
-      #burgers {
+      .burgersConatiner {
         flex-direction: column;
         /* Change to column layout on small screens */
         align-items: center;
@@ -192,7 +192,7 @@
 
 
     @media (max-width: 1000px) {
-      #drinks {
+      .drinksContainer {
         flex-direction: column;
         /* Change to column layout on small screens */
         align-items: center;
@@ -213,132 +213,136 @@
   </style>
 
 
-
-  <div id="burgers">
-
+  <div class="burgersConatiner">
     <div class="title">
       <h1>Burgers</h1>
     </div>
 
 
-    <div class="items">
+    <div id="burgers">
+      <div class="items">
 
-      <div class="item">
-        <div class="picItem">
+        <div class="item">
+          <div class="picItem">
 
-          <img src="/pexels-valeriya-1639557.jpg">
+            <img src="/pexels-valeriya-1639557.jpg">
 
+          </div>
+
+          <div class="data">
+
+            <h2>classic burger</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, repellat.</p>
+
+            <p>$15</p>
+
+          </div>
         </div>
 
-        <div class="data">
 
-          <h2>classic burger</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, repellat.</p>
 
-          <p>$15</p>
 
+        <div class="item">
+          <div class="picItem">
+
+            <img src="/pexels-dana-tentis-118658-552056.jpg">
+
+          </div>
+
+          <div class="data">
+
+            <h2>cheese burger</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+            <p>$20</p>
+
+          </div>
         </div>
+
+
+
+
+
+        <div class="item">
+          <div class="picItem">
+
+            <img src="/pexels-dima-valkov-1186343-3864682.jpg">
+
+          </div>
+
+          <div class="data">
+
+            <h2>classic burger & fries</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+            <p>$12</p>
+
+          </div>
+        </div>
+
+
+
+        <div class="item">
+          <div class="picItem">
+
+            <img src="/pexels-valeriya-1893557 (1).jpg">
+
+          </div>
+
+          <div class="data">
+
+            <h2>chicken burger</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+            <p>$15</p>
+
+          </div>
+        </div>
+
+
+
+
+        <div class="item">
+          <div class="picItem">
+
+            <img src="/pexels-horizon-content-2100060-3738730.jpg">
+
+          </div>
+
+          <div class="data">
+
+            <h2>swiss burger</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+
+            <p>$19</p>
+
+          </div>
+        </div>
+
+
+
+
+
       </div>
-
-
-
-
-      <div class="item">
-        <div class="picItem">
-
-          <img src="/pexels-dana-tentis-118658-552056.jpg">
-
-        </div>
-
-        <div class="data">
-
-          <h2>cheese burger</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
-
-          <p>$20</p>
-
-        </div>
-      </div>
-
-
-
-
-
-      <div class="item">
-        <div class="picItem">
-
-          <img src="/pexels-dima-valkov-1186343-3864682.jpg">
-
-        </div>
-
-        <div class="data">
-
-          <h2>classic burger & fries</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
-
-          <p>$12</p>
-
-        </div>
-      </div>
-
-
-
-      <div class="item">
-        <div class="picItem">
-
-          <img src="/pexels-valeriya-1893557 (1).jpg">
-
-        </div>
-
-        <div class="data">
-
-          <h2>chicken burger</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
-
-          <p>$15</p>
-
-        </div>
-      </div>
-
-
-
-
-      <div class="item">
-        <div class="picItem">
-
-          <img src="/pexels-horizon-content-2100060-3738730.jpg">
-
-        </div>
-
-        <div class="data">
-
-          <h2>swiss burger</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
-
-          <p>$19</p>
-
-        </div>
-      </div>
-
-
-
-
 
     </div>
 
+
+
+
+
+
+
+
+
+  </div>
+
   </div>
 
 
 
-
-
-
-
-
-
   </div>
 
-  </div>
 
 
   <div class="separator"></div>
@@ -346,93 +350,231 @@
 
 
 
-
-
-
-  <div id="drinks">
-
+  <div class="drinksContainer">
     <div class="title">
       <h1>Drinks</h1>
     </div>
 
+    <div id="drinks">
+      <div class="items">
 
-    <div class="items">
-
-      <div class="item">
-        <div class="picItem">
-
-          <img src="/pexels-designbyja-1113500-2109099.jpg">
-
+        <div class="item">
+          <div class="picItem">
+            <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Orange Juice">
+          </div>
+          <div class="data">
+            <h2>Orange Juice</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, repellat.</p>
+            <p>$5</p>
+          </div>
         </div>
 
-        <div class="data">
-
-          <h2>Orange Juice</h2>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, repellat.</p>
-
-          <p>$5</p>
-
+        <div class="item">
+          <div class="picItem">
+            <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Coco Cola">
+          </div>
+          <div class="data">
+            <h2>Coco Cola</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+            <p>$200</p>
+          </div>
         </div>
+
+        <div class="item">
+          <div class="picItem">
+            <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Lemon Juice">
+          </div>
+          <div class="data">
+            <h2>Lemon Juice</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+            <p>$2</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="picItem">
+            <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Mango Juice">
+          </div>
+          <div class="data">
+            <h2>Mango Juice</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
+            <p>$200</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="form" id="formID">
+    <style>
+      .file-input {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
+      /* Style the label to look like a button */
+      .file-input-label {
+        padding: 10px 20px;
+
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        cursor: pointer;
+        display: inline-block;
+        background-color: red;
+        color: white;
+        border: 2px solid white;
+        margin-top: 25px;
+        margin-right: 10px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        color: white;
+        width: 70%;
+
+        margin: auto;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        max-width: 30%;
+
+        border-radius: 10px;
+        padding: 10px;
+
+      }
+
+      #formID {
+        display: none;
+      }
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .chosing {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+      }
+
+      .chosing {
+        margin-bottom: 20px;
+      }
+
+
+      .item-name-div input {
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 5px;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid black;
+      }
+
+      .item-price-div input {
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 5px;
+        padding: 5px;
+        border-radius: 10px;
+        border: 1px solid black;
+
+      }
+
+
+      .item-details-div input {
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 5px;
+        height: 100px;
+        border-radius: 20px;
+        border: 1px solid black;
+        margin-bottom: 10px;
+
+      }
+
+      .category-div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        
+
+      }
+
+      .category-div select {
+        width: 130px;
+        padding: 11px;
+        border-radius: 20px;
+      }
+
+      .inputs {
+        margin-left: 10px;
+      }
+
+      .add-item-btn {
+        padding: 10px;
+        background-color: red;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-bottom: 7px;
+        width: 80%;
+        margin: auto;
+
+      }
+
+      .top button {
+        padding: 15px;
+
+        background-color: red;
+        border: 2px solid white;
+        margin-right: 10px;
+        border-radius: 50%;
+        color: white;
+        font-size: 25px;
+
+      }
+    </style>
+
+    <div class="top">
+      <h2>Add Item</h2>
+      <button onclick="removeForm()">X</button>
+    </div>
+
+    <div class="chosing">
+      <div class="category-div">
+        <label for="category">Choose a category:</label><br>
+        <select id="category" name="category">
+          <option value="empty"></option>
+          <option value="burgers">Burgers</option>
+          <option value="drinks">Drinks</option>
+        </select>
+
       </div>
 
+      <div class="image">
 
+        <label class="file-input-label" for="file-input">Add Image</label><br>
+        <input type="file" id="file-input" class="file-input" accept="image/*">
 
-
-      <div class="item">
-        <div class="picItem">
-
-          <img src="/pexels-designbyja-1113500-2109099.jpg">
-
-        </div>
-
-        <div class="data">
-
-          <h2>coco cola</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
-
-          <p>$200</p>
-
-        </div>
-      </div>
-
-
-
-
-
-      <div class="item">
-        <div class="picItem">
-
-          <img src="pexels-designbyja-1113500-2109099.jpg">
-
-        </div>
-
-        <div class="data">
-
-          <h2>Lemon Juice</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
-
-          <p>$2</p>
-
-        </div>
-      </div>
-
-
-
-      <div class="item">
-        <div class="picItem">
-
-          <img src="/pexels-designbyja-1113500-2109099.jpg">
-
-        </div>
-
-        <div class="data">
-
-          <h2>Mango juice</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
-
-          <p>$200</p>
-
-        </div>
       </div>
 
 
@@ -443,98 +585,44 @@
 
     </div>
 
-
-
-
-    <div class="form" id="formID">
-      <style>
-        .form {
-          display: flex;
-          flex-direction: column;
-          width: 70%;
-          margin: auto;
-          position: absolute;
-          top: 10%;
-          left: 40%;
-          max-width: 30%;
-          border: 2px solid black;
-
-        }
-
-        #formID {
-          display: none;
-        }
-
-        .top {
-          display: flex;
-          justify-content: space-between;
-        }
-
-        .chosing {
-          display: flex;
-          justify-content: space-between;
-        }
-      </style>
-
-      <div class="top">
-        <h2>Add Item</h2>
-        <button onclick="removeForm()">X</button>
-      </div>
-
-      <div class="chosing">
-        <div id="c">
-          <label for="category">Choose a category:</label><br>
-          <select id="category" name="category">
-            <option value="empty"></option>
-            <option value="sandwiches">Sandwiches</option>
-            <option value="drinks">Drinks</option>
-          </select>
-
-        </div>
-
-        <div class="image">
-
-          <label class="file-input-label" for="file-input">Add Image</label><br>
-          <input type="file" id="file-input" class="file-input" accept="image/*">
-
-        </div>
-
-
-
-
-
-
+    <div class="inputs">
+      <div class="item-name-div">
+        <label for="item-name">Item name:</label><br>
+        <input type="text" id="item-name">
 
       </div>
 
+      <div class="item-price-div">
+        <label for="item-name">Item price:</label><br>
+        <input type="text" id="item-price">
+      </div>
 
+      <div class="item-details-div">
 
+        <label for="item-details">Item details:</label><br>
+        <input type="text" id="item-details">
 
-      <label for="item-name">Item name:</label>
-      <input type="text" id="item-name">
-
-      <label for="item-name">Item price:</label>
-      <input type="text" id="item-price">
-
-      <label for="item-details">Item details:</label>
-      <input type="text" id="item-details">
-
-      <button onclick="addItem()">Add Item</button>
-
-
-
-      <label>
-
-      </label>
-
+      </div>
 
 
 
 
     </div>
+
+    <button class="add-item-btn" onclick="addItem()">Add Item</button>
+
+
+
+
+
+
+
+
+
 
   </div>
-  <script src="index2.js"></script>
+
+  <script src="index.js"></script>
 
 </body>
 
