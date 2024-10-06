@@ -2,59 +2,36 @@
 <html lang="en">
 
 <head>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+ 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
 </head>
 
-<body>
-  <style>
+<body >
+  <style class="relative">
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-    body {
-      position: relative;
-    }
 
 
-    img {
-      width: 100px;
-    }
+ 
   </style>
   <header>
-    <style>
-      .top-menu {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+ 
+
+    <div class="flex flex-row items-center justify-between p-5 px-10 bg-[#ffaf04] text-[#5d4037] ">
+      <h3 class="text-lg font-semibold"> Menu</h3>
+
+      <h1 class="text-2xl font-bold">Bite & Bun</h1>
 
 
-        padding: 20px 40px;
-        background-color: #ffaf04;
-        color: #5d4037
-      }
-
-      .top-menu button {
-        padding: 10px;
-        width: 70px;
-        background-color: #fffff0;
-        font-size: 20px;
-        border: none;
-        border-radius: 5px;
-      }
-    </style>
-
-    <div class="top-menu">
-      <h3> Menu</h3>
-
-      <h1>Bite & Bun</h1>
-
-
-      <button onclick="showForm()">+</button>
+      <button onclick="showForm()" class="p-2 w-[70px] bg-[#fffff0] text-[20px] border-0 rounded-md">+</button>
 
 
 
@@ -64,54 +41,16 @@
 
   </header>
   <style>
-    .burgersConatiner {
-      display: flex;
-    }
-
-    .drinksContainer {
-      display: flex;
-    }
-
-    .title {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
-      /* Space below the title */
-      font-family: 'Arial', sans-serif;
-      /* Font family */
-      font-size: 1rem;
-      /* Larger font for title */
-      color: #5d4037;
-      /* Title color */
-
-      /* Light background color for contrast */
-      padding: 10px 20px;
-      /* Padding for title */
-      margin-left: 20px;
-      border-radius: 8px;
-      /* Rounded corners */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      /* Soft shadow */
-      margin-top: 30px;
-      /* background-color: rgb(245, 241, 241); */
-      background-color: #FFA500;
-
-    }
-
+  
+ 
     .items {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       /* 4 equal columns */
       /* 4 equal columns */
-      gap: 20px;
-      /* Space between grid items */
-      padding: 20px;
-      margin-left: 30px;
-
     }
 
-
+   
     @media (max-width: 1024px) {
       .items {
         grid-template-columns: repeat(3, 1fr);
@@ -133,23 +72,7 @@
       }
     }
 
-    .item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .item {
-      padding: 20px;
-      text-align: center;
-      font-size: 1.2rem;
-      color: #5d4037;
-      border-radius: 10px;
-      margin: 10px;
-      background-color: #FFA500;
-      ;
-    }
+   
 
     .item:hover {
       transform: scale(1.05);
@@ -157,24 +80,12 @@
     }
 
 
-    /* Background colors for different items */
 
+    
 
-    .data {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
+   
 
-    .picItem {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .picItem img {
+     .picImg img {
       object-fit: cover;
       width: 100%;
       border-radius: 5px;
@@ -202,36 +113,41 @@
     }
 
 
-    .separator {
-      height: 20px;
-      /* Space between sections */
-      background-color: #f0f0f0;
-      /* Light background color for contrast */
-      margin: 20px 0;
-      /* Vertical margin to create space */
+   
+
+    .title{
+      font-family: 'Arial', sans-serif;
     }
+
+
+    
+  
+
+
   </style>
 
 
-  <div class="burgersConatiner">
-    <div class="title">
-      <h1>Burgers</h1>
-    </div>
+  <div class="burgersConatiner flex">
+   
 
+    <div class="title flex justify-center items-center mb-[20px] text-[1rem] text-[#5d4037] py-[10px] px-[20px] ml-[20px] rounded-[8px] shadow-[0_2px_5px_rgba(0,0,0,0.1)] mt-[30px] bg-[#FFA500]">
+      <h1 class="font-bold text-3xl">Burgers</h1>
+    </div>
+   
 
     <div id="burgers">
-      <div class="items">
+      <div class="items gap-5 p-5 ml-[30px]">
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+          <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-valeriya-1639557.jpg">
 
           </div>
 
-          <div class="data">
+          <div class="flex flex-col items-center gap-2.5">
 
-            <h2>classic burger</h2>
+            <h2 class="text-2xl font-semibold text-center  p-3">Classic burger</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, repellat.</p>
 
             <p>$15</p>
@@ -242,16 +158,17 @@
 
 
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+          
+          <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-dana-tentis-118658-552056.jpg">
 
           </div>
 
-          <div class="data">
+          <div class="flex flex-col items-center gap-2.5">
 
-            <h2>cheese burger</h2>
+            <h2 class="text-2xl font-semibold text-center  p-3">cheese burger</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
 
             <p>$20</p>
@@ -263,16 +180,16 @@
 
 
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+          <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-dima-valkov-1186343-3864682.jpg">
 
           </div>
 
-          <div class="data">
+          <div class="flex flex-col items-center gap-2.5">
 
-            <h2>classic burger & fries</h2>
+            <h2 class="text-2xl font-semibold text-center  p-3"> burger & fries</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
 
             <p>$12</p>
@@ -282,16 +199,16 @@
 
 
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+          <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-valeriya-1893557 (1).jpg">
 
           </div>
 
-          <div class="data">
+          <div class="flex flex-col items-center gap-2.5">
 
-            <h2>chicken burger</h2>
+            <h2 class="text-2xl font-semibold text-center  p-3">chicken burger</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
 
             <p>$15</p>
@@ -302,16 +219,16 @@
 
 
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+          <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-horizon-content-2100060-3738730.jpg">
 
           </div>
 
-          <div class="data">
+          <div class="flex flex-col items-center gap-2.5">
 
-            <h2>swiss burger</h2>
+            <h2 class="text-2xl font-semibold text-center  p-3">swiss burger</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
 
             <p>$19</p>
@@ -345,58 +262,65 @@
 
 
 
-  <div class="separator"></div>
+  <div class="h-5 bg-gray-200 my-5"></div>
 
 
 
 
-  <div class="drinksContainer">
-    <div class="title">
-      <h1>Drinks</h1>
+  <div class="drinksContainer flex">
+    <div class="title flex justify-center items-center mb-[20px] text-[1rem] text-[#5d4037] py-[10px] px-[20px] ml-[20px] rounded-[8px] shadow-[0_2px_5px_rgba(0,0,0,0.1)] mt-[30px] bg-[#FFA500]">
+
+
+      <h1 class="font-bold text-3xl">Drinks</h1>
     </div>
 
     <div id="drinks">
-      <div class="items">
+      <div class="items gap-5 p-5 ml-[30px]">
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+
+
+          <div class="picImg w-full flex justify-center items-center">
             <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Orange Juice">
           </div>
-          <div class="data">
-            <h2>Orange Juice</h2>
+          <div class="flex flex-col items-center gap-2.5">
+            <h2 class="text-2xl font-semibold text-center  p-3">Orange Juice</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, repellat.</p>
             <p>$5</p>
           </div>
         </div>
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+
+          <div class="w-full flex justify-center items-center">
             <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Coco Cola">
           </div>
-          <div class="data">
-            <h2>Coco Cola</h2>
+          <div class="flex flex-col items-center gap-2.5">
+            <h2 class="text-2xl font-semibold text-center  p-3">Coco Cola</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
             <p>$200</p>
           </div>
         </div>
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+
+          <div class="picImg w-full flex justify-center items-center">
             <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Lemon Juice">
           </div>
-          <div class="data">
-            <h2>Lemon Juice</h2>
+          <div class="flex flex-col items-center gap-2.5">
+            <h2 class="text-2xl font-semibold text-center  p-3">Lemon Juice</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
             <p>$2</p>
           </div>
         </div>
 
-        <div class="item">
-          <div class="picItem">
+        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+
+          <div class="picImg w-full flex justify-center items-center">
             <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Mango Juice">
           </div>
-          <div class="data">
-            <h2>Mango Juice</h2>
+          <div class="flex flex-col items-center gap-2.5">
+            <h2 class="text-2xl font-semibold text-center  p-3">Mango Juice</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, temporibus.</p>
             <p>$200</p>
           </div>
@@ -621,6 +545,7 @@
 
 
   </div>
+  
 
   <script src="index.js"></script>
 
