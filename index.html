@@ -4,29 +4,27 @@
 <head>
 
   <script src="https://cdn.tailwindcss.com"></script>
- 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu</title>
 </head>
 
-<body >
+<body>
   <style class="relative">
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
-
-
- 
   </style>
   <header>
- 
+
 
     <div class="flex flex-row items-center justify-between p-5 px-10 bg-[#ffaf04] text-[#5d4037] ">
-      <h3 class="text-lg font-semibold"> Menu</h3>
+      <h3 class="text-lg font-bold"> Menu</h3>
 
       <h1 class="text-2xl font-bold">Bite & Bun</h1>
 
@@ -41,8 +39,6 @@
 
   </header>
   <style>
-  
- 
     .items {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -50,7 +46,7 @@
       /* 4 equal columns */
     }
 
-   
+
     @media (max-width: 1024px) {
       .items {
         grid-template-columns: repeat(3, 1fr);
@@ -72,7 +68,7 @@
       }
     }
 
-   
+
 
     .item:hover {
       transform: scale(1.05);
@@ -81,11 +77,11 @@
 
 
 
-    
 
-   
 
-     .picImg img {
+
+
+    .picImg img {
       object-fit: cover;
       width: 100%;
       border-radius: 5px;
@@ -113,32 +109,28 @@
     }
 
 
-   
 
-    .title{
+
+    .title {
       font-family: 'Arial', sans-serif;
     }
-
-
-    
-  
-
-
   </style>
 
 
   <div class="burgersConatiner flex">
-   
 
-    <div class="title flex justify-center items-center mb-[20px] text-[1rem] text-[#5d4037] py-[10px] px-[20px] ml-[20px] rounded-[8px] shadow-[0_2px_5px_rgba(0,0,0,0.1)] mt-[30px] bg-[#FFA500]">
+
+    <div
+      class="title flex justify-center items-center mb-[20px] text-[1rem] text-[#5d4037] py-[10px] px-[20px] ml-[20px] rounded-[8px] shadow-[0_2px_5px_rgba(0,0,0,0.1)] mt-[30px] bg-[#FFA500]">
       <h1 class="font-bold text-3xl">Burgers</h1>
     </div>
-   
+
 
     <div id="burgers">
       <div class="items gap-5 p-5 ml-[30px]">
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
           <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-valeriya-1639557.jpg">
@@ -158,8 +150,9 @@
 
 
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
-          
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+
           <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-dana-tentis-118658-552056.jpg">
@@ -180,7 +173,8 @@
 
 
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
           <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-dima-valkov-1186343-3864682.jpg">
@@ -199,7 +193,8 @@
 
 
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
           <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-valeriya-1893557 (1).jpg">
@@ -219,7 +214,8 @@
 
 
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
           <div class="picImg w-full flex justify-center items-center">
 
             <img src="/pexels-horizon-content-2100060-3738730.jpg">
@@ -268,7 +264,8 @@
 
 
   <div class="drinksContainer flex">
-    <div class="title flex justify-center items-center mb-[20px] text-[1rem] text-[#5d4037] py-[10px] px-[20px] ml-[20px] rounded-[8px] shadow-[0_2px_5px_rgba(0,0,0,0.1)] mt-[30px] bg-[#FFA500]">
+    <div
+      class="title flex justify-center items-center mb-[20px] text-[1rem] text-[#5d4037] py-[10px] px-[20px] ml-[20px] rounded-[8px] shadow-[0_2px_5px_rgba(0,0,0,0.1)] mt-[30px] bg-[#FFA500]">
 
 
       <h1 class="font-bold text-3xl">Drinks</h1>
@@ -277,7 +274,8 @@
     <div id="drinks">
       <div class="items gap-5 p-5 ml-[30px]">
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
 
 
           <div class="picImg w-full flex justify-center items-center">
@@ -290,7 +288,8 @@
           </div>
         </div>
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
 
           <div class="w-full flex justify-center items-center">
             <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Coco Cola">
@@ -302,7 +301,8 @@
           </div>
         </div>
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
 
           <div class="picImg w-full flex justify-center items-center">
             <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Lemon Juice">
@@ -314,7 +314,8 @@
           </div>
         </div>
 
-        <div class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+        <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
 
           <div class="picImg w-full flex justify-center items-center">
             <img src="/pexels-designbyja-1113500-2109099.jpg" alt="Mango Juice">
@@ -339,42 +340,84 @@
 
   <div class="form" id="formID">
     <style>
+      .chosing {
+        display: flex;
+        flex-direction: column;
+        /* Stack elements vertically */
+        gap: 10px;
+        /* Control space between elements */
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+
+      }
+
+
+
+      .image {
+
+        display: flex;
+        flex-direction: column;
+        /* Stack label and input vertically */
+        margin-bottom: 0;
+        /* Reset bottom margin */
+      }
+
       .file-input {
-        opacity: 0;
-        position: absolute;
-        z-index: -1;
+        display: none;
+        /* Hide the actual file input */
+      }
+
+      select {
+        padding: 8px;
+        /* Adjust padding for aesthetics */
+        border-radius: 5px;
+        /* Add border radius */
+        border: 1px solid #ccc;
+        /* Add border */
+        color: black;
       }
 
       /* Style the label to look like a button */
       .file-input-label {
-        padding: 10px 20px;
-
-        color: rgb(0, 0, 0);
-        border-radius: 5px;
-        cursor: pointer;
-        display: inline-block;
-        background-color: red;
+        padding: 10px;
+        /* Label padding */
         color: white;
+        /* Label text color */
         border: 2px solid white;
-        margin-top: 25px;
-        margin-right: 10px;
+        /* Label border */
+        border-radius: 5px;
+        /* Rounded corners for label */
+        background-color: #FFA500;
+        /* Background color for visibility */
+        cursor: pointer;
+        /* Pointer cursor */
+        margin-top: 5px;
+        /* Adjust space above the label */
       }
+
+
 
       .form {
         display: flex;
         flex-direction: column;
-        background-color: red;
-        color: white;
-        width: 70%;
+        background-color: #f5f5f5;
+        color: black;
+
 
         margin: auto;
         position: absolute;
         top: 10%;
-        left: 40%;
-        max-width: 30%;
+        left: 30%;
+
+
 
         border-radius: 10px;
         padding: 10px;
+        width: 40%;
+
 
       }
 
@@ -385,106 +428,113 @@
       .top {
         display: flex;
         justify-content: space-between;
-      }
-
-      .chosing {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .inputs {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-
-      }
-
-      .chosing {
+        align-items: center;
         margin-bottom: 20px;
       }
 
 
-      .item-name-div input {
-        width: 80%;
-        margin-left: 20px;
-        margin-top: 5px;
-        padding: 5px;
-        border-radius: 10px;
-        border: 1px solid black;
-      }
-
-      .item-price-div input {
-        width: 80%;
-        margin-left: 20px;
-        margin-top: 5px;
-        padding: 5px;
-        border-radius: 10px;
-        border: 1px solid black;
-
-      }
 
 
-      .item-details-div input {
-        width: 80%;
-        margin-left: 20px;
-        margin-top: 5px;
-        height: 100px;
-        border-radius: 20px;
-        border: 1px solid black;
-        margin-bottom: 10px;
-
-      }
-
-      .category-div {
-        display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-        
-
-      }
-
-      .category-div select {
-        width: 130px;
-        padding: 11px;
-        border-radius: 20px;
+      /* Adjust layout for smaller screens */
+      @media (max-width: 800px) {
+        .chosing {
+          flex-direction: column;
+          /* Stack elements vertically */
+        }
       }
 
       .inputs {
-        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+     
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* Control the gap between input groups */
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        /* Stack label and input vertically */
+        margin: 0;
+        /* Reset margin */
+      }
+
+      label {
+        margin: 0;
+        /* Remove default margin */
+        padding: 0;
+        /* Remove default padding */
+      }
+
+      input {
+        padding: 5px;
+        /* Add some padding for aesthetics */
+        border: 1px solid #ccc;
+        /* Add border for visibility */
+        border-radius: 5px;
+        /* Round corners */
       }
 
       .add-item-btn {
+        width: 150px;
+        /* Fixed width */
         padding: 10px;
-        background-color: red;
-        border: 2px solid white;
-        border-radius: 10px;
+        background-color: #FFA500;
         color: white;
-        margin-bottom: 7px;
-        width: 80%;
-        margin: auto;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+        /* Space above the button */
+        width: auto;
+        /* Auto width */
+        padding: 10px;
+        background-color: #FFA500;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px auto;
+        margin-top: 20px;
+        /* Centered with auto margins */
+        display: block;
+        /* Ensures the button is treated as a block element */
 
       }
 
-      .top button {
-        padding: 15px;
-
-        background-color: red;
-        border: 2px solid white;
-        margin-right: 10px;
-        border-radius: 50%;
-        color: white;
-        font-size: 25px;
-
-      }
+     
     </style>
 
     <div class="top">
       <h2>Add Item</h2>
-      <button onclick="removeForm()">X</button>
+      <button onclick="removeForm()">
+        <i class="fas fa-times"></i>
+      </button>
     </div>
+
 
     <div class="chosing">
       <div class="category-div">
+
         <label for="category">Choose a category:</label><br>
         <select id="category" name="category">
           <option value="empty"></option>
@@ -494,6 +544,7 @@
 
       </div>
 
+
       <div class="image">
 
         <label class="file-input-label" for="file-input">Add Image</label><br>
@@ -502,50 +553,26 @@
       </div>
 
 
-
-
-
-
-
     </div>
-
     <div class="inputs">
-      <div class="item-name-div">
-        <label for="item-name">Item name:</label><br>
+      <div class="input-group">
+        <label for="item-name">Item name:</label>
         <input type="text" id="item-name">
-
       </div>
-
-      <div class="item-price-div">
-        <label for="item-name">Item price:</label><br>
+      <div class="input-group">
+        <label for="item-price">Item price:</label>
         <input type="text" id="item-price">
       </div>
-
-      <div class="item-details-div">
-
-        <label for="item-details">Item details:</label><br>
+      <div class="input-group">
+        <label for="item-details">Item details:</label>
         <input type="text" id="item-details">
-
       </div>
-
-
-
-
     </div>
 
     <button class="add-item-btn" onclick="addItem()">Add Item</button>
 
-
-
-
-
-
-
-
-
-
   </div>
-  
+
 
   <script src="index.js"></script>
 
