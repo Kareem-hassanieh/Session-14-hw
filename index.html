@@ -29,7 +29,7 @@
       <h1 class="text-2xl font-bold">Bite & Bun</h1>
 
 
-      <button onclick="showForm()" class="p-2 w-[70px] bg-[#fffff0] text-[20px] border-0 rounded-md">+</button>
+      <button onclick="showForm()" class="p-2 w-[70px] bg-[#fffff0] text-[20px] border-0 rounded-md text-2xl font-bold">+</button>
 
 
 
@@ -340,64 +340,19 @@
 
   <div class="form" id="formID">
     <style>
-      .chosing {
-        display: flex;
-        flex-direction: column;
-        /* Stack elements vertically */
-        gap: 10px;
-        /* Control space between elements */
-      }
+      
 
-      select {
-        width: 100%;
-        padding: 10px;
-
-      }
+     
 
 
 
-      .image {
+   
 
-        display: flex;
-        flex-direction: column;
-        /* Stack label and input vertically */
-        margin-bottom: 0;
-        /* Reset bottom margin */
-      }
+    
+  
 
-      .file-input {
-        display: none;
-        /* Hide the actual file input */
-      }
-
-      select {
-        padding: 8px;
-        /* Adjust padding for aesthetics */
-        border-radius: 5px;
-        /* Add border radius */
-        border: 1px solid #ccc;
-        /* Add border */
-        color: black;
-      }
-
-      /* Style the label to look like a button */
-      .file-input-label {
-        padding: 10px;
-        /* Label padding */
-        color: white;
-        /* Label text color */
-        border: 2px solid white;
-        /* Label border */
-        border-radius: 5px;
-        /* Rounded corners for label */
-        background-color: #FFA500;
-        /* Background color for visibility */
-        cursor: pointer;
-        /* Pointer cursor */
-        margin-top: 5px;
-        /* Adjust space above the label */
-      }
-
+    
+      
 
 
       .form {
@@ -425,21 +380,16 @@
         display: none;
       }
 
-      .top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-      }
+   
 
 
 
 
-      /* Adjust layout for smaller screens */
+     
       @media (max-width: 800px) {
         .chosing {
           flex-direction: column;
-          /* Stack elements vertically */
+         
         }
       }
 
@@ -461,82 +411,30 @@
 
 
      
-      .inputs {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        /* Control the gap between input groups */
-      }
+  
 
-      .input-group {
-        display: flex;
-        flex-direction: column;
-        /* Stack label and input vertically */
-        margin: 0;
-        /* Reset margin */
-      }
+     
 
-      label {
-        margin: 0;
-        /* Remove default margin */
-        padding: 0;
-        /* Remove default padding */
-      }
+   
 
-      input {
-        padding: 5px;
-        /* Add some padding for aesthetics */
-        border: 1px solid #ccc;
-        /* Add border for visibility */
-        border-radius: 5px;
-        /* Round corners */
-      }
-
-      .add-item-btn {
-        width: 150px;
-        /* Fixed width */
-        padding: 10px;
-        background-color: #FFA500;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        margin-top: 20px;
-        /* Space above the button */
-        width: auto;
-        /* Auto width */
-        padding: 10px;
-        background-color: #FFA500;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-        margin: 10px auto;
-        margin-top: 20px;
-        /* Centered with auto margins */
-        display: block;
-        /* Ensures the button is treated as a block element */
-
-      }
+     
 
      
     </style>
 
-    <div class="top">
-      <h2>Add Item</h2>
+    <div class="top flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold">Add Item</h2>
       <button onclick="removeForm()">
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times text-2xl"></i>
       </button>
     </div>
 
 
-    <div class="chosing">
+    <div class="flex flex-col gap-2.5">
       <div class="category-div">
 
         <label for="category">Choose a category:</label><br>
-        <select id="category" name="category">
+        <select id="category" name="category" class="w-full p-2 rounded border border-gray-300 text-black">
           <option value="empty"></option>
           <option value="burgers">Burgers</option>
           <option value="drinks">Drinks</option>
@@ -545,31 +443,31 @@
       </div>
 
 
-      <div class="image">
+      <div class="flex flex-col mb-0">
 
-        <label class="file-input-label" for="file-input">Add Image</label><br>
-        <input type="file" id="file-input" class="file-input" accept="image/*">
+        <label class="p-2.5 text-white border-2 border-white rounded bg-[#FFA500] cursor-pointer mt-1.5" for="file-input">Add Image</label><br>
+        <input type="file" id="file-input" class="hidden" accept="image/*">
 
       </div>
 
 
     </div>
-    <div class="inputs">
-      <div class="input-group">
-        <label for="item-name">Item name:</label>
-        <input type="text" id="item-name">
+    <div class="inputs flex flex-col gap-2.5">
+      <div class="input-group flex flex-col m-0">
+        <label for="item-name" class="m-0 p-0" >Item name:</label>
+        <input type="text" id="item-name" class="p-[5px] border border-gray-300 rounded">
       </div>
-      <div class="input-group">
-        <label for="item-price">Item price:</label>
-        <input type="text" id="item-price">
+      <div class="input-group flex flex-col m-0">
+        <label for="item-price" class="m-0 p-0">Item price:</label>
+        <input type="text" id="item-price"  class="p-[5px] border border-gray-300 rounded">
       </div>
-      <div class="input-group">
-        <label for="item-details">Item details:</label>
-        <input type="text" id="item-details">
+      <div class="input-group flex flex-col m-0">
+        <label for="item-details" class="m-0 p-0">Item details:</label>
+        <input type="text" id="item-details"  class="p-[40px] border border-gray-300 rounded">
       </div>
     </div>
 
-    <button class="add-item-btn" onclick="addItem()">Add Item</button>
+    <button class="add-item-btn w-[150px] p-2.5 bg-[#FFA500] text-white border-none rounded cursor-pointer text-lg mt-5 mx-auto " onclick="addItem()">Add Item</button>
 
   </div>
 
