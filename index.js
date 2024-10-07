@@ -84,18 +84,28 @@ function updateDrinksHTML() {
 function generateSingleItemHTML(item) {
   return `
   
-<div class='item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]'>
-     <div>
-     <img src='${item.image}'>
-   
-     </div>
-  <div>
+      <div
+          class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
+          <div class="picImg w-full flex justify-center items-center">
 
-    <h2>${item.name}</h2>
-    <p>${item.description}</p>
-    <p>${item.price}</p>
-  </div>
+            <img src="${item.image}">
 
-</div>
+          </div>
+
+          <div class="flex flex-col items-center gap-2.5">
+
+            <h2 class="text-2xl font-semibold text-center  p-3"> ${item.name}</h2>
+            <p class="h-24">${item.description}</p>
+
+            <p>$${item.price}</p>
+
+          </div>
+        </div>
   `
+}
+
+
+function toggleMenu() {
+  const menu = document.getElementById('burger-links');
+  menu.classList.toggle('hidden');
 }

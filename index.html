@@ -21,15 +21,86 @@
     }
   </style>
   <header>
+    <style>
+      header {
+        position: relative;
+      }
+
+      #burger-links {
+        position: absolute;
+        top: 100%;
+        left: 3px;
+        width: 17%;
+        height: 100vh;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        /* Stack links vertically */
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        /* Start hidden */
+        visibility: hidden;
+        /* Prevents click events when hidden */
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        /* Smooth transition */
+      }
+
+      /* Show the menu when not hidden */
+      #burger-links:not(.hidden) {
+        opacity: 1;
+        /* Make it visible */
+        visibility: visible;
+        /* Allow interaction */
+      }
+
+      /* Each link styled like a separate box */
+      #burger-links a {
+        display: block;
+        
+        margin: 5px 0;
+        /* Margin around the link boxes */
+        padding: 10px;
+        /* Padding inside the link boxes */
+        border-radius: 8px;
+        /* Rounded corners for link boxes */
+        text-decoration: none;
+        /* Remove underline */
+        color: #000000;
+        /* Text color */
+        font-weight: bold;
+        /* Bold text */
+       
+        /* Box shadow */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        /* Smooth transitions */
+      }
+
+      /* Link hover effect */
+      #burger-links a:hover {
+        background-color:#FFA500;
+        /* Change background on hover */
+        transform: translateY(-3px);
+        /* Raise effect on hover */
+      }
+    </style>
 
 
     <div class="flex flex-row items-center justify-between p-5 px-10 bg-[#ffaf04] text-[#5d4037] ">
-      <h3 class="text-lg font-bold"> Menu</h3>
+      <h3 class="text-lg font-bold"> <i class="fa-solid fa-bars" onclick="toggleMenu()"></i></h3>
 
       <h1 class="text-2xl font-bold">Bite & Bun</h1>
 
 
-      <button onclick="showForm()" class="p-2 w-[70px] bg-[#fffff0] text-[20px] border-0 rounded-md text-2xl font-bold">+</button>
+      <button onclick="showForm()"
+        class="p-2 w-[70px] bg-[#fffff0] text-[20px] border-0 rounded-md text-2xl font-bold">+</button>
+
+
+      <div id="burger-links">
+        <a href="#">Burgers</a>
+        <a href="#">Drinks</a>
+        <a href="#">Surprise</a>
+      </div>
 
 
 
@@ -126,8 +197,8 @@
     </div>
 
 
-    <div id="burgers">
-      <div class="items gap-5 p-5 ml-[30px]">
+    <div id="burgerSection">
+      <div class="items gap-5 p-5 ml-[30px]" id="burgers">
 
         <div
           class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
@@ -271,8 +342,8 @@
       <h1 class="font-bold text-3xl">Drinks</h1>
     </div>
 
-    <div id="drinks">
-      <div class="items gap-5 p-5 ml-[30px]">
+    <div id="drinksSection">
+      <div class="items gap-5 p-5 ml-[30px]" id="drinks">
 
         <div
           class="item flex flex-col items-center justify-center p-5 text-center text-[1.2rem] text-[#5d4037] rounded-[10px] m-2.5 bg-[#FFA500]">
@@ -340,21 +411,6 @@
 
   <div class="form" id="formID">
     <style>
-      
-
-     
-
-
-
-   
-
-    
-  
-
-    
-      
-
-
       .form {
         display: flex;
         flex-direction: column;
@@ -380,16 +436,16 @@
         display: none;
       }
 
-   
 
 
 
 
-     
+
+
       @media (max-width: 800px) {
         .chosing {
           flex-direction: column;
-         
+
         }
       }
 
@@ -399,27 +455,6 @@
 
 
       }
-
-
-
-
-
-
-
-
-
-
-
-     
-  
-
-     
-
-   
-
-     
-
-     
     </style>
 
     <div class="top flex justify-between items-center mb-6">
@@ -445,7 +480,8 @@
 
       <div class="flex flex-col mb-0">
 
-        <label class="p-2.5 text-white border-2 border-white rounded bg-[#FFA500] cursor-pointer mt-1.5" for="file-input">Add Image</label><br>
+        <label class="p-2.5 text-white border-2 border-white rounded bg-[#FFA500] cursor-pointer mt-1.5"
+          for="file-input">Add Image</label><br>
         <input type="file" id="file-input" class="hidden" accept="image/*">
 
       </div>
@@ -454,20 +490,22 @@
     </div>
     <div class="inputs flex flex-col gap-2.5">
       <div class="input-group flex flex-col m-0">
-        <label for="item-name" class="m-0 p-0" >Item name:</label>
+        <label for="item-name" class="m-0 p-0">Item name:</label>
         <input type="text" id="item-name" class="p-[5px] border border-gray-300 rounded">
       </div>
       <div class="input-group flex flex-col m-0">
         <label for="item-price" class="m-0 p-0">Item price:</label>
-        <input type="text" id="item-price"  class="p-[5px] border border-gray-300 rounded">
+        <input type="text" id="item-price" class="p-[5px] border border-gray-300 rounded">
       </div>
       <div class="input-group flex flex-col m-0">
         <label for="item-details" class="m-0 p-0">Item details:</label>
-        <input type="text" id="item-details"  class="p-[40px] border border-gray-300 rounded">
+        <input type="text" id="item-details" class="p-[40px] border border-gray-300 rounded">
       </div>
     </div>
 
-    <button class="add-item-btn w-[150px] p-2.5 bg-[#FFA500] text-white border-none rounded cursor-pointer text-lg mt-5 mx-auto " onclick="addItem()">Add Item</button>
+    <button
+      class="add-item-btn w-[150px] p-2.5 bg-[#FFA500] text-white border-none rounded cursor-pointer text-lg mt-5 mx-auto "
+      onclick="addItem()">Add Item</button>
 
   </div>
 
